@@ -1,4 +1,4 @@
-module nats-example
+module github.com/arthur-hsu/nats-example
 
 go 1.25.4
 
