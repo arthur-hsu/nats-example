@@ -48,7 +48,7 @@ func getMsg(ObjPath any) usp_msg.Get {
 
 func main() {
 	// --- 1. 連線設定 ---
-	natsURL := "nats://100.81.97.99:4222"
+	natsURL := "nats://127.0.0.1:4222"
 	user := "oktopususer"
 	pw := "oktopuspw"
 
