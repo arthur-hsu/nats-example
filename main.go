@@ -10,8 +10,8 @@ import (
 
 	// 專門處理 proto 與 json 的轉換
 	// 這裡請改成你本地的 proto package 路徑
-	"nats-example/usp"
-	"nats-example/usp/usp_msg"
+	"github.com/arthur-hsu/nats-example/usp"
+	"github.com/arthur-hsu/nats-example/usp/usp_msg"
 )
 
 func SetMsg(ObjPath string, Param string, Value string, Required bool) usp_msg.Set {
@@ -31,7 +31,7 @@ func SetMsg(ObjPath string, Param string, Value string, Required bool) usp_msg.S
 		},
 	}
 }
-func getMsg(ObjPath any) usp_msg.Get {
+func GetMsg(ObjPath any) usp_msg.Get {
 	var ParamPaths []string
 	switch v := ObjPath.(type) {
 	case string:
@@ -74,7 +74,7 @@ func main() {
 		uspInstance = usp.NewSetMsg(Content)
 	case "Get":
 		// Content := getMsg("Device.LocalAgent.MTP.1.")
-		Content := getMsg([]string{"Device.LocalAgent.MTP.1.Alias", "Device.LocalAgent.MTP.1.Protocol"})
+		Content := GetMsg([]string{"Device.LocalAgent.MTP.1.Alias", "Device.LocalAgent.MTP.1.Protocol"})
 		uspInstance = usp.NewGetMsg(Content)
 	}
 

@@ -1,8 +1,8 @@
 package usp
 
 import (
-	"nats-example/usp/usp_msg"
-	"nats-example/usp/usp_record"
+	"github.com/arthur-hsu/nats-example/usp/usp_msg"
+	"github.com/arthur-hsu/nats-example/usp/usp_record"
 
 	"github.com/google/uuid"
 )
